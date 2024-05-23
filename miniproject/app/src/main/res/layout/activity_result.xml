@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tv_winning_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Winning Amount"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/tv_cat1_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cat 1 Progress"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/tv_cat2_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cat 2 Progress"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/tv_cat3_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cat 3 Progress"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go Back"
+        android:layout_marginTop="16dp"/>
+
+    <nl.dionsegijn.konfetti.xml.KonfettiView
+        android:id="@+id/konfettiView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

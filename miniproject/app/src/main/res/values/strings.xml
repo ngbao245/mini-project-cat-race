@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MiniProject</string>
+    <string name="amount_won">Funds: %1$d</string>
+    <string name="cat_progress">Cat %d: %d%%</string>
+</resources>
