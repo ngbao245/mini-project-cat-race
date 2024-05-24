@@ -130,6 +130,9 @@ public class MainActivity extends AppCompatActivity {
                     etBetMoney3.setEnabled(false);
                     btnStart.setEnabled(false);
                     btnReset.setEnabled(false);
+                    cb1.setEnabled(false);
+                    cb2.setEnabled(false);
+                    cb3.setEnabled(false);
                 }
             }
         });
@@ -309,6 +312,9 @@ public class MainActivity extends AppCompatActivity {
             }
             btnStart.setEnabled(true);
             btnReset.setEnabled(true);
+            cb1.setEnabled(true);
+            cb2.setEnabled(true);
+            cb3.setEnabled(true);
         }
     }
 
