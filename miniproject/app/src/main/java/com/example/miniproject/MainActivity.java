@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     boolean treeAnimationRunning = false;
     private MediaPlayer winSoundEffect;
 
-    private  Button btnNap;
+    private  Button btnNap, btnLogOut;
 
     // Placeholder arrays for tree positions
     float[] tree1X = new float[4];
@@ -85,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
         tree24 = findViewById(R.id.tree24);
 
         btnNap = (Button) findViewById(R.id.btnNap);
+        btnLogOut = (Button) findViewById(R.id.btnLogOut);
 
         initializeMediaPlayers();
 
@@ -165,6 +166,15 @@ public class MainActivity extends AppCompatActivity {
                     tvMoney.setText(String.valueOf("$" +totalMoney));
                     btnNap.setEnabled(false);
                 }
+            }
+        });
+
+        btnLogOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, sign_in.class);
+                startActivity(intent);
+                finish();
             }
         });
     }
