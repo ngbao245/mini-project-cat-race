@@ -42,11 +42,15 @@ public class MainActivity extends AppCompatActivity {
     boolean treeAnimationRunning = false;
     private MediaPlayer winSoundEffect;
 
+    private  Button btnNap;
+
     // Placeholder arrays for tree positions
     float[] tree1X = new float[4];
     float[] tree1Y = new float[4];
     float[] tree2X = new float[4];
     float[] tree2Y = new float[4];
+
+    ObjectAnimator[] treeAnimators = new ObjectAnimator[8]; // Hold references to the animators
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,11 +84,19 @@ public class MainActivity extends AppCompatActivity {
         tree23 = findViewById(R.id.tree23);
         tree24 = findViewById(R.id.tree24);
 
+        btnNap = (Button) findViewById(R.id.btnNap);
+
         initializeMediaPlayers();
 
         etBetMoney1.setEnabled(false);
         etBetMoney2.setEnabled(false);
         etBetMoney3.setEnabled(false);
+
+        sb1.setEnabled(false);
+        sb2.setEnabled(false);
+        sb3.setEnabled(false);
+
+        btnNap.setEnabled(false);
 
         cb1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -142,6 +154,17 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 resetRace();
                 initializeMediaPlayers();
+            }
+        });
+
+        btnNap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(totalMoney == 0) {
+                    totalMoney += 100;
+                    tvMoney.setText(String.valueOf("$" +totalMoney));
+                    btnNap.setEnabled(false);
+                }
             }
         });
     }
@@ -315,6 +338,13 @@ public class MainActivity extends AppCompatActivity {
             cb1.setEnabled(true);
             cb2.setEnabled(true);
             cb3.setEnabled(true);
+
+            stopTreeAnimations();
+            resetTreePositions();
+
+            if(totalMoney == 0) {
+                btnNap.setEnabled(true);
+            }
         }
     }
 
@@ -350,7 +380,7 @@ public class MainActivity extends AppCompatActivity {
             totalMoney -= bet3;
         }
 
-        tvMoney.setText(String.valueOf(totalMoney));
+        tvMoney.setText(String.valueOf("$" +totalMoney));
 
         Intent intent = new Intent(MainActivity.this, ResultActivity.class);
         intent.putExtra("winningCat", winningCat);
@@ -398,14 +428,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void stopTreeAnimations() {
-        tree11.clearAnimation();
-        tree12.clearAnimation();
-        tree13.clearAnimation();
-        tree14.clearAnimation();
-        tree21.clearAnimation();
-        tree22.clearAnimation();
-        tree23.clearAnimation();
-        tree24.clearAnimation();
+        for (ObjectAnimator animator : treeAnimators) {
+            if (animator != null) {
+                animator.cancel();
+            }
+        }
     }
 
     private void resetTreePositions() {
@@ -432,22 +459,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void startTreeAnimation() {
-        animateTrees(tree11, 0);
-        animateTrees(tree12, 1);
-        animateTrees(tree13, 2);
-        animateTrees(tree14, 3);
+        treeAnimators[0] = animateTrees(tree11);
+        treeAnimators[1] = animateTrees(tree12);
+        treeAnimators[2] = animateTrees(tree13);
+        treeAnimators[3] = animateTrees(tree14);
 
-        animateTrees(tree21, 0);
-        animateTrees(tree22, 1);
-        animateTrees(tree23, 2);
-        animateTrees(tree24, 3);
+        treeAnimators[4] = animateTrees(tree21);
+        treeAnimators[5] = animateTrees(tree22);
+        treeAnimators[6] = animateTrees(tree23);
+        treeAnimators[7] = animateTrees(tree24);
     }
 
-    private void animateTrees(ImageView tree, int position) {
+    private ObjectAnimator animateTrees(ImageView tree) {
         ObjectAnimator animator = ObjectAnimator.ofFloat(tree, "translationX", -300f); // Change to translationX
         animator.setDuration(2000); // Set duration for the animation
         animator.setRepeatCount(ObjectAnimator.INFINITE); // Repeat the animation indefinitely
         animator.setRepeatMode(ObjectAnimator.RESTART); // Restart the animation when it reaches the end
         animator.start();
+        return animator;
     }
 }

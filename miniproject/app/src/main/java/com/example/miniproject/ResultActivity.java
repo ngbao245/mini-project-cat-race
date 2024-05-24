@@ -66,7 +66,7 @@ public class ResultActivity extends AppCompatActivity implements View.OnClickLis
 
 
         // Set text for TextViews
-        tvWinningAmount.setText(getString(R.string.amount_won, winningAmount));
+        tvWinningAmount.setText(getString(R.string.amount_won, winningAmount) + "$");
         tvCat1Progress.setText(getString(R.string.cat_progress, 1, cat1ProgressPercentage));
         tvCat2Progress.setText(getString(R.string.cat_progress, 2, cat2ProgressPercentage));
         tvCat3Progress.setText(getString(R.string.cat_progress, 3, cat3ProgressPercentage));

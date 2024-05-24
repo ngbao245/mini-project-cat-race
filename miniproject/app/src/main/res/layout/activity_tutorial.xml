@@ -72,7 +72,7 @@
         android:id="@+id/btnGame"
         android:layout_width="225dp"
         android:layout_height="51dp"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="372dp"
         android:text="START"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
