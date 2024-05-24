@@ -6,42 +6,46 @@
 
     <TextView
         android:id="@+id/tv_winning_amount"
-        android:layout_width="wrap_content"
+        android:layout_width="375dp"
         android:layout_height="wrap_content"
-        android:text="Winning Amount"
+        android:textAlignment="center"
+        android:text="Winning Status"
         android:textSize="18sp"
         android:layout_marginBottom="16dp"/>
 
     <TextView
         android:id="@+id/tv_cat1_progress"
-        android:layout_width="wrap_content"
+        android:layout_width="375dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:text="Cat 1 Progress"
-        android:textSize="16sp"
-        android:layout_marginBottom="8dp"/>
+        android:textAlignment="center"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/tv_cat2_progress"
-        android:layout_width="wrap_content"
+        android:layout_width="375dp"
         android:layout_height="wrap_content"
         android:text="Cat 2 Progress"
+        android:textAlignment="center"
         android:textSize="16sp"
         android:layout_marginBottom="8dp"/>
 
     <TextView
         android:id="@+id/tv_cat3_progress"
-        android:layout_width="wrap_content"
+        android:layout_width="375dp"
         android:layout_height="wrap_content"
         android:text="Cat 3 Progress"
+        android:textAlignment="center"
         android:textSize="16sp"
         android:layout_marginBottom="16dp"/>
 
     <Button
         android:id="@+id/buttonBack"
-        android:layout_width="wrap_content"
+        android:layout_width="377dp"
         android:layout_height="wrap_content"
-        android:text="Go Back"
-        android:layout_marginTop="16dp"/>
+        android:layout_marginTop="16dp"
+        android:text="Go Back" />
 
     <nl.dionsegijn.konfetti.xml.KonfettiView
         android:id="@+id/konfettiView"
