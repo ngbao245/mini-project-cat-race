@@ -16,35 +16,30 @@
         android:src="@drawable/back1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.471"
+        app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.297" />
-
-    <ImageView
-        android:id="@+id/background_image2"
-        android:layout_width="238dp"
-        android:layout_height="73dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/back1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.399" />
+        app:layout_constraintVertical_bias="0.321" />
 
     <ImageView
         android:id="@+id/background_image3"
         android:layout_width="237dp"
         android:layout_height="59dp"
+        android:layout_marginTop="4dp"
         android:scaleType="centerCrop"
         android:src="@drawable/back2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.471"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/background_image2"
+        app:layout_constraintTop_toBottomOf="@+id/background_image2" />
+
+    <ImageView
+        android:id="@+id/background_image2"
+        android:layout_width="238dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="4dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/back1"
+        app:layout_constraintStart_toStartOf="@+id/background_image1"
+        app:layout_constraintTop_toBottomOf="@+id/background_image1" />
 
     <ImageView
         android:id="@+id/cat2"
@@ -101,22 +96,32 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="169dp"
-        android:layout_height="45dp"
+        android:layout_width="150dp"
+        android:layout_height="47dp"
         android:layout_marginTop="36dp"
         android:gravity="center"
-        android:text="Đua mèo"
+        android:text="Cat Race"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
+        android:id="@+id/cb3"
+        android:layout_width="82dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:text=""
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cb2" />
+
+    <CheckBox
         android:id="@+id/cb1"
         android:layout_width="82dp"
         android:layout_height="51dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="212dp"
         android:text=""
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -125,21 +130,11 @@
         android:id="@+id/cb2"
         android:layout_width="82dp"
         android:layout_height="51dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
         android:text=""
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cb1" />
-
-    <CheckBox
-        android:id="@+id/cb3"
-        android:layout_width="82dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
-        android:text=""
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cb2" />
 
     <SeekBar
         android:id="@+id/sb1"
@@ -305,7 +300,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
-        android:text="Nạp"
+        android:text="Recharge"
         app:layout_constraintEnd_toStartOf="@+id/textView2"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"

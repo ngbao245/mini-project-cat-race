@@ -11,48 +11,24 @@
         android:id="@+id/textView"
         android:layout_width="162dp"
         android:layout_height="66dp"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="80dp"
         android:gravity="center"
         android:text="Tutorial"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="354dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="36dp"
-        android:text="-There are 3 cats. The race ends when a cat reaches the end."
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.28"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="354dp"
-        android:layout_height="84dp"
-        android:layout_marginTop="112dp"
-        android:text="-You have 100$ that you can bet on the cats. You earn money when the cat(s) you bet on win(s)."
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.28"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="354dp"
         android:layout_height="56dp"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="216dp"
         android:text="-You can't play the game if you don't have enough money."
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.28"
+        app:layout_constraintHorizontal_bias="0.456"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -60,11 +36,11 @@
         android:id="@+id/textView8"
         android:layout_width="354dp"
         android:layout_height="56dp"
-        android:layout_marginTop="304dp"
+        android:layout_marginTop="300dp"
         android:text="-You can check the boxes to bet."
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.28"
+        app:layout_constraintHorizontal_bias="0.456"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -72,10 +48,35 @@
         android:id="@+id/btnGame"
         android:layout_width="225dp"
         android:layout_height="51dp"
-        android:layout_marginTop="372dp"
+        android:layout_marginTop="368dp"
         android:text="START"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.553"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="354dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="108dp"
+        android:text="-You have 100$ that you can bet on the cats. You earn money when the cat(s) you bet on win(s)."
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.456"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="354dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        android:text="-There are 3 cats. The race ends when a cat reaches the end."
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.456"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
